@@ -1,6 +1,7 @@
 # 7-Useful-JS-Projects
 
-All these projects are truly usefull for all in #7usefulJSprojects 
+All these projects are truly useful for all in #7usefulJSprojects 
+
 Check them out and feel free to submit your own ideas, guides or reviews to develop these apps further.
 
 * [New Year Countdown](https://rajondey.github.io/7-Useful-JS-Projects/New-Year-Countdown)
