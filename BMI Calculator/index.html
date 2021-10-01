@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+    <meta name="description" content="BMI Calculator is one more valuable project among 7 Useful JS Projects. Body mass index (BMI) is a value derived from the mass and height of a person.">
+
+    <title>BMI Calculator • RDC</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container"> 
+
+        <!-- App Box Starts Here -->
+        <div class="box">
+            <h1 class="text-center">BMI Calculator:</h1>
+            <form id="myForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="Height" placeholder="Height (in cm)">
+                    <label for="Height">Height (in cm)</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="Weight" placeholder="Weight (in kg)">
+                    <label for="Weight">Weight (in kg)</label>
+                </div>
+            </form>
+            <button id="submit" type="submit" class="btn" onclick="main()">Calculate</button>
+            
+            <div id="modal">
+                <p id="output" class="text-center output"></p>
+                
+                <p class="bmi-desc"><b>Body mass index (BMI)</b> is a value derived from the mass and height of a person. A BMI of 18.5 - 24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
+
+                <i id="close" class="fas fa-times"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
