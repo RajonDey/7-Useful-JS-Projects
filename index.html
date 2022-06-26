@@ -19,25 +19,25 @@
   <!-- Page Navigation -->
   <ul class="main-page-list">
     <li id="tag1" class="active">
-    	<a href="#sec1">Text</a>
+    	<a href="#sec1">Day's Remain</a>
     </li>
     <li id="tag2">
-    	<a href="#sec2">Text</a>
+    	<a href="#sec2">Github Profiles</a>
     </li>
     <li id="tag3">
-    	<a href="#sec3">Text</a>
+    	<a href="#sec3">Generate Password</a>
     </li>
     <li id="tag4">
-    	<a href="#sec4">Text</a>
+    	<a href="#sec4">Check BMI</a>
     </li>
     <li id="tag5">
-    	<a href="#sec5">Text</a>
+    	<a href="#sec5">Search Lyrics</a>
     </li>
     <li id="tag6">
-    	<a href="#sec6">Text</a>
+    	<a href="#sec6">Check Type Speed</a>
     </li>
     <li id="tag7">
-    	<a href="#sec7">Text</a>
+    	<a href="#sec7">Make ToDo</a>
     </li>
   </ul>
 
@@ -58,136 +58,137 @@
     </div>
 
     <!-- Github profile search -->
-	<div class="section" id="sec2">
-		<div class="container">
-	        <form id="form">
-	            <input type="text" id="search" placeholder="Search gihub profiles!">
-	        </form>
-	        <div class="user-profile" id="userProfile"></div>
-	    </div>
-	</div>
+		<div class="section" id="sec2">
+			<div class="container">
+		        <form id="form">
+		            <input type="text" id="search" placeholder="Search gihub profiles!">
+		        </form>
+		        <div class="user-profile" id="userProfile"></div>
+		    </div>
+		</div>
 
-	<!-- Generate random password -->
-	<div class="section" id="sec3">
-		<div class="container">
-			<div class="box" style="min-width: 380px">
-				<h1>Generate Password:</h1>
-				<div class="result-container">
-					<span id="result"></span>
-					<button class="btn" id="clipboard">
-						<i class="far fa-clipboard"></i>
+		<!-- Generate random password -->
+		<div class="section" id="sec3">
+			<div class="container">
+				<div class="box" style="min-width: 380px">
+					<h1>Generate Password:</h1>
+					<div class="result-container">
+						<span id="result"></span>
+						<button class="btn" id="clipboard">
+							<i class="far fa-clipboard"></i>
+						</button>
+					</div>
+					<div class="options">
+						<div class="option">
+							<label>Password length</label>
+							<input type="number" id="length" min='4' max='20' value='20' />
+						</div>
+						<div class="option">
+							<label>Include uppercase letters</label> 
+							<input type="checkbox" id="uppercase" checked />
+						</div>
+						<div class="option">
+							<label>Include lowercase letters</label> 
+							<input type="checkbox" id="lowercase" checked />
+						</div>
+						<div class="option">
+							<label>Include numbers</label> 
+							<input type="checkbox" id="numbers" checked />
+						</div>
+						<div class="option">
+							<label>Include symbols</label> 
+							<input type="checkbox" id="symbols" checked />
+						</div>
+					</div>
+					<button class="btn btn-large" id="generate">
+						Generate password
 					</button>
-				</div>
-				<div class="options">
-					<div class="option">
-						<label>Password length</label>
-						<input type="number" id="length" min='4' max='20' value='20' />
-					</div>
-					<div class="option">
-						<label>Include uppercase letters</label> 
-						<input type="checkbox" id="uppercase" checked />
-					</div>
-					<div class="option">
-						<label>Include lowercase letters</label> 
-						<input type="checkbox" id="lowercase" checked />
-					</div>
-					<div class="option">
-						<label>Include numbers</label> 
-						<input type="checkbox" id="numbers" checked />
-					</div>
-					<div class="option">
-						<label>Include symbols</label> 
-						<input type="checkbox" id="symbols" checked />
-					</div>
-				</div>
-				<button class="btn btn-large" id="generate">
-					Generate password
-				</button>
-			</div> 
-		</div>
-	</div>
-
-	<!-- BMI Calculator -->
-	<div class="section" id="sec4">
-		<div class="container"> 
-	        <div class="box" style="position: relative;">
-	            <h1 class="text-center">BMI Calculator:</h1>
-	            <form id="myForm">
-	                <div class="input-group">
-	                    <input type="text" class="form-control" id="Height" placeholder="Height (in cm)">
-	                    <label for="Height">Height (in cm)</label>
-	                </div>
-	                <div class="input-group">
-	                    <input type="text" class="form-control" id="Weight" placeholder="Weight (in kg)">
-	                    <label for="Weight">Weight (in kg)</label>
-	                </div>
-	            </form>
-	            <button id="submit" type="submit" class="btn" onclick="main()">Calculate</button>
-	            <div id="modal">
-	                <p id="output" class="text-center output"></p>
-	                <p class="bmi-desc"><b>Body mass index (BMI)</b> is a value derived from the mass and height of a person. A BMI of 18.5 - 24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
-	                <i id="close" class="fas fa-times"></i>
-	            </div>
-	        </div>
-
-	    </div>
-	</div>
-
-	<!-- Search Lyrics -->
-	<div class="section" id="sec5">
-		<div class="container">
-	        <div class="box">
-	            <h1>Search Lyrics</h1>
-	            <form id="formsec5" class="form">
-	                <input type="search" id="searchsec5" placeholder="Enter artist name or song title...">
-	                <button class="btn">Search</button>
-	            </form>
-	        </div>
-	        <section class="result box" id="resultsec5"></section>
-	    </div>
-	</div>
-
-	<!-- Type speed -->
-	<div class="section" id="sec6">
-		<div class="container">
-	        <div class="box main" style="position: relative;">
-	           
-	            <h1 class="text-black font-weight-bold">Typing Speed & Accuracy Checker:</h1>
-
-	            <p id="message6">Text will appear here once you click on Start</p>
-
-	            <textarea tabindex="0" autocomplete="off" id="writemessage6" rows="10" placeholder="click on Start button to write here"></textarea>
-	            <button class="btn btn-light px-4" id="startBtn6">Start</button>
-
-	            <div id="result6" class="mt-2 pt-2 text-center">
-	                <div class="result-box"></div>
-	                <i id="close6" class="fas fa-times"></i>
-	            </div>
-	        </div>
-	    </div> 
-	</div>
-
-	<div class="section" id="sec7">
-		<div class="container">
-
-			<div class="box">
-				<div class="task-input">
-	              <ion-icon>+</ion-icon>
-	              <input type="text" placeholder="Write your priorities here...">
-	            </div>
-	            <div class="controls">
-	              <div class="filters">
-	                <span class="active" id="all">All</span>
-	                <span id="pending">Pending</span>
-	                <span id="completed">Completed</span>
-	              </div>
-	              <button class="clear-btn">Clear List</button>
-	            </div>
-	            <ul class="task-box"></ul>
+				</div> 
 			</div>
-
 		</div>
-	</div>
+
+		<!-- BMI Calculator -->
+		<div class="section" id="sec4">
+			<div class="container"> 
+		        <div class="box" style="position: relative;">
+		            <h1 class="text-center">BMI Calculator:</h1>
+		            <form id="myForm">
+		                <div class="input-group">
+		                    <input type="text" class="form-control" id="Height" placeholder="Height (in cm)">
+		                    <label for="Height">Height (in cm)</label>
+		                </div>
+		                <div class="input-group">
+		                    <input type="text" class="form-control" id="Weight" placeholder="Weight (in kg)">
+		                    <label for="Weight">Weight (in kg)</label>
+		                </div>
+		            </form>
+		            <button id="submit" type="submit" class="btn" onclick="main()">Calculate</button>
+		            <div id="modal">
+		                <p id="output" class="text-center output"></p>
+		                <p class="bmi-desc"><b>Body mass index (BMI)</b> is a value derived from the mass and height of a person. A BMI of 18.5 - 24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
+		                <i id="close" class="fas fa-times"></i>
+		            </div>
+		        </div>
+
+		    </div>
+		</div>
+
+		<!-- Search Lyrics -->
+		<div class="section" id="sec5">
+			<div class="container">
+		        <div class="box">
+		            <h1>Search Lyrics</h1>
+		            <form id="formsec5" class="form">
+		                <input type="search" id="searchsec5" placeholder="Enter artist name or song title...">
+		                <button class="btn">Search</button>
+		            </form>
+		        </div>
+		        <section class="result box" id="resultsec5"></section>
+		    </div>
+		</div>
+
+		<!-- Type speed -->
+		<div class="section" id="sec6">
+			<div class="container">
+		        <div class="box main" style="position: relative;">
+		           
+		            <h1 class="text-black font-weight-bold">Typing Speed & Accuracy Checker:</h1>
+
+		            <p id="message6">Text will appear here once you click on Start</p>
+
+		            <textarea tabindex="0" autocomplete="off" id="writemessage6" rows="10" placeholder="click on Start button to write here"></textarea>
+		            <button class="btn btn-light px-4" id="startBtn6">Start</button>
+
+		            <div id="result6" class="mt-2 pt-2 text-center">
+		                <div class="result-box"></div>
+		                <i id="close6" class="fas fa-times"></i>
+		            </div>
+		        </div>
+		    </div> 
+		</div>
+
+		<!-- Make ToDo -->
+		<div class="section" id="sec7">
+			<div class="container">
+
+				<div class="box">
+					<div class="task-input">
+		              <ion-icon>+</ion-icon>
+		              <input type="text" placeholder="Write your priorities here...">
+		            </div>
+		            <div class="controls">
+		              <div class="filters">
+		                <span class="active" id="all">All</span>
+		                <span id="pending">Pending</span>
+		                <span id="completed">Completed</span>
+		              </div>
+		              <button class="clear-btn">Clear List</button>
+		            </div>
+		            <ul class="task-box"></ul>
+				</div>
+
+			</div>
+		</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="app.js"></script>

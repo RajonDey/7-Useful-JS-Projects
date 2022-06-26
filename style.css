@@ -1,26 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/*html{
-  scroll-behavior: smooth;
-  -webkit-scroll-behavior: smooth;
-  -moz-osx-scroll-behavior: smooth;
-}*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-}
 body{
-	width: 100vw;
-	height: 100vh;
-	background-color: #ffffff;
-	font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1{
@@ -66,46 +60,62 @@ h1{
     justify-content: center;
     margin: 0;
     min-height: 100vh;
-    max-width: 420px; 
+    max-width: 500px; 
     margin: 0 auto;
 }
 
 ul.main-page-list{
-  top: calc(100% / 2 - 60px);
+  top: calc(100% / 2 - 150px);
   position: fixed;
   height: auto;
   right: 10px;
 }
 
-ul.main-page-list li{
-  list-style-type: none;
-  width: 8px;
-  height: 8px;
-  background-color: brown;
-  border-radius: 4px;
-  margin: 20px 15px;
-  transition: 0.3s ease;
+ul.main-page-list li {
+    list-style-type: none;
+    background-color: brown;
+    border-radius: 4px;
+    margin: 20px 15px;
+    transition: 0.3s ease;
+}
+ul.main-page-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    display: block;
+    width: 100%;
+}
+
+ul.main-page-list li a:hover {
+    background-color: yellow;
+    color: #000000;    
 }
 
 ul.main-page-list li.active{
   background-color: yellow;
 }
-
-.section{
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+ul.main-page-list li.active a{
+    color: #000000;
 }
 
-#sec1{
+.section{
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*#sec1{
   background-color: rgb(255, 153, 153); 
 }
 
@@ -115,7 +125,7 @@ ul.main-page-list li.active{
 
 #sec3{
   background-color: rgb(255, 153, 102); 
-}
+}*/
 
 /* -----------------------------
 	styles for new year countdown
@@ -437,6 +447,9 @@ ul.main-page-list li.active{
 /* --------------------------------
 	styles for search song lyrics
 --------------------------------- */
+#sec5 .container{
+    position: relative;
+}
 #sec5 .form input {
     padding: 12px;
     border: none;
@@ -448,11 +461,24 @@ ul.main-page-list li.active{
 
 #sec5 .btn {
     min-height: 40px;
+    width: 100px;
 }
 
-#sec5 .result.box{
+#sec5 .box{
+    width: 500px;
+}
+#sec5 .result.box {
     padding: 0px;
-    margin-top: 20px;
+    position: absolute;
+    left: -130%;
+    top: 0;
+    /*overflow-y: scroll;
+    height: 100vh;*/
+}
+@media only screen and(max-width: 992px){
+    #sec5 .result.box {
+        left: 0;
+    }    
 }
 #sec5 .full-lyrics,
 #sec5 .result ul{
